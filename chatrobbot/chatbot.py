@@ -14,7 +14,9 @@ adsense_code = '''
   });
 </script>
 '''
-st.html(adsense_code, unsafe_allow_html=True, key='head')
+st.markdown(adsense_code, unsafe_allow_html=True)
+
+# Add a stylesheet
 st.markdown(
     """
     <style>
@@ -68,4 +70,4 @@ if user_input:
 if st.session_state["generated"]:
     for i in range(len(st.session_state["generated"])-1, -1, -1):
         st.markdown("<div class='message'>{}</div>".format(st.session_state["generated"][i]),unsafe_allow_html=True, key=str(i))
-        st.markdown("<div class='message'>{}</div>".format(st.session_state['past'][i]),unsafe_allow_html=True, key=str(i)+'_user')
+        st.markdown("<div class='message'>{}</div>".format(st.session_state['past'][i]),unsafe_allow_html=True, key=str(
