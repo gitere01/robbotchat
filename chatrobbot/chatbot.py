@@ -14,7 +14,9 @@ adsense_code = '''
   });
 </script>
 '''
-st.html(adsense_code, unsafe_allow_html=True, key='head')
+st.markdown(adsense_code, unsafe_allow_html=True)
+
+# Add a stylesheet
 st.markdown(
     """
     <style>
